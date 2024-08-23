@@ -14,10 +14,18 @@
 :root {
   --bg-color: #fdfdfd;
   --text-color: #333;
-  --main-color: #009614;
-  --white-color: #fdfdfd;
   --main-color: #333;
-  --shadow-color: rgba(0, 0, 0, 0.2);
+  --white-color: #fdfdfd;
+  --shadow-color: rgba(0, 0, 0, .2);
+  --reverse-main-color:#fdfdfd; 
+}
+
+.dark-mode {
+  --bg-color: #012005;
+  --text-color: #fdfdfd;
+  --main-color: #fdfdfd;
+  --shadow-color: rgba(0, 0, 0, 0.7);
+  --reverse-main-color:#333;
 }
 
 html {
@@ -93,6 +101,12 @@ body {
   cursor: pointer;
 }
 
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--text-color);
+  display: none;
+}
+
 .header.sticky #darkMode-icon {
   opacity: 0.9;
   color: var(--text-color);
@@ -147,7 +161,7 @@ section {
 
 .home-content .social-media a:hover {
   background: var(--main-color);
-  color: var(--white-color);
+  color: var(--reverse-main-color);
 }
 
 .btn {
@@ -195,7 +209,7 @@ section {
   animation-delay: 1s;
 }
 
- @keyframes rotatebox {
+@keyframes rotatebox {
   0% {
     transform: rotate(0deg);
   }
@@ -211,11 +225,11 @@ section {
   100% {
     transform: rotate(-360deg);
   }
-} 
+}
 
 .home .profession-box .profession {
   position: absolute;
- left: 0;
+  left: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -223,7 +237,7 @@ section {
   transform: rotate(calc(360deg / 4 * var(--i)));
   transform-origin: 458px;
   background: var(--bg-color);
-  padding: 20px 0 ;
+  padding: 20px 0;
 }
 
 .home .profession-box .profession:nth-child(1) {
@@ -242,8 +256,6 @@ section {
   padding-left: 115px;
 }
 
-
-
 .home .profession i {
   font-size: 3.8rem;
 }
@@ -260,22 +272,20 @@ section {
   border: 3px solid var(--main-color);
   border-radius: 50%;
 }
- 
-   .home .profession-container .overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-top: 460px solid rgb(107, 143, 36);
-    border-right: 460px solid yellowgreen;
-    border-bottom: 460px solid yellowgreen;
-    border-left: 460px solid transparent;
-}   
 
+.home .profession-container .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 460px solid rgb(107, 143, 36);
+  border-right: 460px solid yellowgreen;
+  border-bottom: 460px solid yellowgreen;
+  border-left: 460px solid transparent;
+}
 
-
- .home-img img {
+.home-img img {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -283,7 +293,7 @@ section {
   width: 65%;
   pointer-events: none;
 }
- 
+
 span {
   color: yellowgreen;
 }
@@ -295,22 +305,19 @@ span {
   gap: 4rem;
 }
 
- .about-img {
-  width: 40vw;
-} 
-
 .heading {
   font-size: 4.5rem;
   text-align: center;
 }
 
 .about-content h2 {
-  text-align: left;
+  text-align: center;
   line-height: 1.2;
 }
 
 .about-content h3 {
   font-size: 2rem;
+  text-align: center;
 }
 
 .about-content p {
@@ -348,4 +355,190 @@ span {
 
 .works-box p {
   font-size: 1.6rem;
+}
+
+.contact h2 {
+  margin-bottom: 3rem;
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--bg-color);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+  box-shadow: 0 0.1rem 0.5rem var(--main-color);
+}
+
+.contact form .input-box input {
+  width: 49%;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1335px) {
+  html {
+    font-size: 55%;
+  }
+
+  .home .profession-container .profession-box {
+    right: -12rem;
+  }
+  .home .profession-container .overlay {
+    right: -9rem;
+  }
+  .home-img img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 160px;
+    width: 60%;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 1180px) {
+  .header {
+    padding: 2rem 3%;
+  }
+  section {
+    padding: 10rem 3% 2rem;
+  }
+  .home .profession-container .profession-box {
+    right: -22rem;
+  }
+  .home .profession-container .overlay {
+    right: -15rem;
+  }
+}
+
+@media (max-width: 1035px) {
+  .home .home-content {
+    max-width: 50rem;
+  }
+  .home .profession-container .profession-box {
+    right: -45rem;
+  }
+  .home .profession-container .overlay {
+    right: -39.5rem;
+  }
+  .home-img {
+    display: none;
+  }
+}
+
+@media (max-width: 827px) {
+  #menu-icon {
+    display: block;
+  }
+
+  #darkMode-icon {
+    position: absolute;
+    right: 7rem;
+    font-size: 2.6rem;
+    color: var(--text-color);
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5 1rem rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: var(--text-color);
+  }
+
+  .navbar a:nth-child(1),
+  .navbar a:nth-child(2) {
+    color: var(--text-color);
+  }
+
+  .navbar a.active {
+    color: var(--main-color);
+  }
+
+  .navbar a::before {
+    display: none;
+  }
+
+  .home {
+    padding: 0 3% 23rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+
+  .home-content h1 {
+    font-size: 5rem;
+  }
+
+  .home-content .social-media  {
+    margin: 2.5rem 0.75rem 3rem;
+    justify-content: center;
+   
+  }
+
+  
+
+  .home .profession-container .profession-box {
+    
+    display: none;
+  }
+
+  
+
+  .home .profession-container .overlay {
+    position: fixed;
+    top: 80rem;
+    left: 65%;
+    right: 0;
+    transform: rotate(90deg) translate(-50%, 50%) scaleY(3);
+    border-width: 23.9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact form .input-box input {
+    width: 100%;
+  }
 }

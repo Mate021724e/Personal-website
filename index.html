@@ -19,11 +19,13 @@
                 <a href="#home" class="active">Home</a>
                 <a href="#about">About</a>
                 <a href="#works">Works</a>
-                <a href="#portfolio">Portfolio</a>
                 <a href="#contact">Contact</a>
 
             </nav>
             <div class="bx bx-moon" id="darkMode-icon"></div>
+
+             <div class="bx bx-menu" id="menu-icon"></div>   
+
         </header>
         
         <section class="home" id="home">
@@ -39,7 +41,7 @@
                     <a href="https://steamcommunity.com/profiles/76561199052806672/"><i class='bx bxl-steam' ></i></a>
                 </div>
 
-                <a href="#" class="btn">Download CV</a>
+                <a href="files/СV.pdf" class="btn">Download CV</a>
             </div>
 
             <div class="profession-container">
@@ -78,16 +80,12 @@
         </section>
 
         <section class="about" id="about">
-            <div class="about-img">
-                <img src="images/Group 1.png" alt="">
-            </div>
-
+            
             <div class="about-content">
                 <h2 class="heading"> About <span>Me</span></h2>
                 <h3>There you can find more information about me!</h3>
-                <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam sed eum quod? Maxime tempora, nesciunt error molestias animi cum laudantium accusantium, totam, delectus perspiciatis ducimus illo perferendis dolorum? Culpa, facere.</P>
-                <a href="#" class="btn"> Read More</a>
-                
+                <P>I am 18 y.o student from Lviv. <br> I am currently a 2nd year student at Ivan Franko National University of Lviv.<br></P>
+  
             </div>
         </section>
 
@@ -101,15 +99,34 @@
                     <i class='bx bx-code-alt'></i>
                     <h3>Web Development</h3>
                     <p>COMMING SOON</p>
-                    <a href="#" class="btn">Read More</a>
+                    
                 </div>
             </div>
 
         </section>
 
-        
+        <section class="contact" id="contact" >
+            <h2 class="heading">Contact<span> Me</span></h2>
 
+            <form action="https://api.web3forms.com/submit" method="POST">
+                
+                    
+                <div class="input-box">
+                    <input type="hidden" name="access_key" value="7876d38c-91f6-4831-85d3-8dfce29e234f">
+                    <input type="text" name="full-name" placeholder="Full Name">
+                    <input type="email" name="Email-Address" placeholder="Email Address">
+                </div>
+                <div class="input-box">
+                    <input type="number" name="Mobile-Number" placeholder="Mobile Number">
+                    <input type="text" name="Email-Subject" placeholder="Email Subject">
+                </div>
+                
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send Message" class="btn">
+            </form>
+        </section>
 
+        <script src="https://unpkg.com/scrollreveal"></script>
 
         <script src="js/script.js"></script>
 
