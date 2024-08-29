@@ -321,6 +321,7 @@ span {
 }
 
 .about-content p {
+  text-align: center;
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
 }
